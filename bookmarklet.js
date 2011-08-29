@@ -42,7 +42,7 @@ function beginJ() {
 			var minus = $('#minusMaxBeatty');
 			
 			
-			var overlay = '<img src=\'' + imgSrc + '\' style=\'position:absolute;top:0;left:0;z-index:1000;opacity:0.2;border:0;outline:1px solid red;\' id=\'dragAble\' />';
+			var overlay = '<img src=\'file://' + imgSrc + '\' style=\'position:absolute;top:0;left:0;z-index:1000;opacity:0.2;border:0;outline:1px solid red;\' id=\'dragAble\' />';
 			
 			body.prepend(overlay);
 			var drag = $('#dragAble');
@@ -71,13 +71,11 @@ function beginJ() {
 						break;
 					case 187:
 						opa = parseFloat(drag.css('opacity')) + 0.05;
-						console.log(opa.toFixed(2));
 						drag.css('opacity', opa.toFixed(2));
 						current = plus;
 						break;
 					case 189:
 						opa = parseFloat(drag.css('opacity')) - 0.1;
-						console.log(opa.toFixed(2));
 						drag.css('opacity', opa.toFixed(2));
 						current = minus;
 						break;
